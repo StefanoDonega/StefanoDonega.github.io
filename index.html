@@ -7,88 +7,166 @@
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/remixicon/3.5.0/remixicon.min.css">
 </head>
-<body>
-    <nav>
-        <div class="logo">
-            <a href="#">Stefano Donegà</a>
+
+
+<body id="home">
+    <div class="navbar" id="navbar">
+        <nav>
+            <div class="logo">
+                <a href="#home" onclick="smoothScroll('#home')">Stefano Donegà</a>
+            </div>
+
+            <div>
+                <ul class="nav-link">
+                    <li class="link"><a href="#chisono" onclick="smoothScroll('#chisono')">Chi Sono</a></li>
+                    <li class="link"><a href="#progetti" onclick="smoothScroll('#progetti')">Progetti</a></li>
+                    <li class="link"><a href="#contatti" onclick="smoothScroll('#contatti')">Contatti</a></li>
+                </ul>
+            </div>
+
+            <div>
+                <button class="btn">Ciao!</button>
+            </div>
+        </nav>
+    </div>
+
+    <div  class="sezione1">
+
+        <header class="container">
+            <div class="content">
+                <div class="blur"></div>
+                <div class="blur"></div>
+                <h3>Benvenutə nel mio portfolio</h3>
+                <h1>Sono <span>Stefano</span>,<br>Front-end Developer & UX Designer</h1>
+                <p></p>
+            </div>
+        </header>
+
+        <br><br><br>
+
+        <div class="images">
+            <img src="icons/icons8-html-48.png" alt="html">
+            <img src="icons/icons8-css-48.png" alt="css">
+            <img src="icons/icons8-javascript-48.png" alt="js">
+            <img src="icons/icons8-reagire-48.png" alt="react">
+            <img src="icons/icons8-maria-db-48.png" alt="mariadb">
+            <img src="icons/icons8-wordpress-48.png" alt="wordpress">
+            <img src="icons/icons8-figura-48.png" alt="figma">
         </div>
+    </div>
+    <!-- <div class="blur2"></div>
+    <div class="blur2"></div> -->
 
-
-        <ul class="nav-link">
-            <li class="link"><a href="#">Chi Sono</a></li>
-            <li class="link"><a href="#">Progetti</a></li>
-            <li class="link"><a href="#">Contatti</a></li>
-        </ul>
-
-        <button class="btn">Ciao!</button>
-
-    </nav>
-
-
-    <header class="container">
-        <div class="content">
-            <div class="blur"></div>
-            <div class="blur"></div>
-            <h3>Benvenutə nel mio portfolio</h3>
-            <h1>Sono <span>Stefano</span>, Front-end Developer</h1>
-            <p></p>
-        </div>
-    </header>
-
-<br><br><br><br><br>
-    
-
-    <div class="blur2"></div>
-    <div class="blur2"></div>
-    <div class="chisono">
+    <div class="chisono"  id="chisono">
         <div class="testo">
             <h2>Chi sono?</h2>
-            <p>Da sempre un creativo sono
-                appassionato di disegno e
-                collezionismo, soprattutto di fumetti.<br>
-                Adoro leggere ed ascoltare molta
-                musica e, appena ho la possibilità, viaggiare: vicino o
-                lontano, l'importante è scoprire
-                qualcosa di nuovo!<br>
-                Mi reputo una persona molto <span>precisa</span>
-                ed <span>ordinata</span>, imparo in fretta e non ho paura di
-                mettermi in gioco.<br>
-                Ho un'ottima conoscenza del
-                pacchetto <span>Office</span> e, grazie all'esperienza maturata sul lavoro ed
+            <p> Da sempre un creativo adoro disegnare e dipingere lasciandomi trasportare dall'enorme qantità di muisica che ascolto.<br>
+                Al momento sto frequentando un corso di <span>Web Development</span> e <span>Web Design</span> presso 
+                <i><a href="https://itslogistica.it/" target="_blank">ITS Academy LAST di Verona</a></i>
+                dove ho potuto immergermi nella mia passione per l'informatica sviluppando competenze in ambito <span>Front-end</span> e <span>User Experience</span> impegnandomi
+                a creare design sempre freschi ed originali.
+                <br>
+                Inoltre grazie all'esperienza maturata sul campo ed
                 alla partecipazione ad un corso dedicato
-                (Udemy), ho buone competenze nell'uso
-                dei <span>Social Media</span> per il <span>Marketing</span>;
-                completano il mio profile un livello intermedio di <span>inglese</span> e <span>spagnolo</span></p>
+                (Udemy), ho ottime conoscenze sull'uso
+                dei <span>Social Media</span> per il <span>Marketing</span>.
+                
+            </p>
         </div>
 
         <div class="immagine">
-            <img src="" alt="Stefano">
+            <img src="/img/foto.png" alt="Stefano">
         </div>
     </div>
     
-    <div class="progetti">
-        <h2>I miei progetti</h2>
-        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. 
-            Doloremque illo asperiores iste hic beatae distinctio, vi
-            tae quam eveniet dolor eligendi provident voluptate animi
-             maxime veniam minus recusandae autem numquam tempora pla
-             ceat aliquam necessitatibus. Soluta deleniti nesciunt, e
-             xercitationem laudantium delectus facere placeat quos fa
-             cilis sapiente qui, ullam expedita quas debitis animi?</p>
+    <div class="progetti" id="progetti">
+        <h2 >I miei <span>progetti</span></h2>
+        
+            
+            <!-- <div class="blur"></div>
+            <div class="blur"></div> -->
+    
+
+<!-- ---------------------------------SLIDING CARDS------------------------------------------------------------------------------ -->
+        <div class="wrapper">
+            <div class="contenitorefoto">
+                <input type="radio" name="slide" id="c1" checked>
+                <label for="c1" class="card">
+                    <div class="row">
+                        <div class="icon">1</div>
+                        <div class="description">
+                            <h4>PROGETTO 1</h4>
+                            <p>DESCRIZIONE BREVE PROGETTO 1</p>
+                        </div>
+                    </div>
+                </label>
+                <input type="radio" name="slide" id="c2" >
+                <label for="c2" class="card">
+                    <div class="row">
+                        <div class="icon">2</div>
+                        <div class="description">
+                            <h4>PROGETTO 2</h4>
+                            <p>DESCRIZIONE BREVE PROGETTO 2</p>
+                        </div>
+                    </div>
+                </label>
+                <input type="radio" name="slide" id="c3" >
+                <label for="c3" class="card">
+                    <div class="row">
+                        <div class="icon">3</div>
+                        <div class="description">
+                            <h4>PROGETTO 3</h4>
+                            <p>DESCRIZIONE BREVE PROGEETO 3</p>
+                        </div>
+                    </div>
+                </label>
+                <input type="radio" name="slide" id="c4" >
+                <label for="c4" class="card">
+                    <div class="row">
+                        <div class="icon">4</div>
+                        <div class="description">
+                            <h4>PROGETTO 4</h4>
+                            <p>DESCRIZIONE BREVE PROGETTO 4</p>
+                        </div>
+                    </div>
+                </label>
+            </div>
+        </div>
+<!-- ---------------------------------FINE SLIDING CARDS------------------------------------------------------------------------- -->
     </div>
 
+    <div class="contatti" id="contatti">
+        <div class="titolo">
+            <h2 >Come contattarmi</h2>
+        </div>
 
-    <div class="contatti">
-        <h2>Come contattarmi</h2>
-        <img src="/icons/github-fill.svg" alt="github">
-        <img src="/icons/phone-fill.svg" alt="github">
-        <img src="/icons/github-fill.svg" alt="github">
-        <img src="/icons/github-fill.svg" alt="github">
+        <div class="contacts-links">
+
+            <div class="recapiti-social">
+                <p><b>Telefono: </b> <span class="tel">348 384 70 41</span></p>
+                <p><b>E-mail:</b> <a href="mailto:stefanodonegaa@gmail.com">stefano.donegaa@gmail.com</a></p>
+            </div>
+
+            <div class="recapiti-social">
+                <p><b>Linkedin:</b> <a href="https://www.linkedin.com/in/stefano-donega/" target="_blank">Stefano Donegà</a></p>
+                <p><b>Github:</b> <a href="https://github.com/StefanoDonega" target="_blank">StefanoDonega</a></p>
+            </div>
+
+        </div>
+
+     
 
     </div>
+    <!-- <div class="blur2"></div>
+    <div class="blur2"></div> -->
 
+    <div class="col100">
+        <div class="col33"></div>
+        <div class="col33">Grazie per la vostra <span>attenzione</span>!</div>
+        <div class="col33"></div>
+    </div>
 
 
     <script src="script.js"></script>
-</body>
+</body  >
 </html>
